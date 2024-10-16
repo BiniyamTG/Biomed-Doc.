@@ -1,0 +1,790 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #34495e;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.navbar-brand h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 24px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-link, .navbar-button {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar-hamburger {
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar-hamburger {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+}
+
+/* HomePage / Feed */
+.home-page {
+  padding: 20px;
+}
+
+.feed {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-card {
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-card h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.post-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.post-card p {
+  margin: 10px 0;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Media Components */
+audio, video {
+  width: 100%;
+  margin: 10px 0;
+}
+
+/* Create Post */
+.create-post {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.caption-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.file-input {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.file-upload {
+  cursor: pointer;
+}
+
+.post-button {
+  padding: 10px 15px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post-button:hover {
+  background-color: #3498db;
+}
+
+/* Comment Section */
+.comment-section {
+  margin-top: 10px;
+}
+
+.comment-input {
+  width: calc(100% - 90px);
+  padding: 10px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.comment-button {
+  padding: 10px 15px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-button:hover {
+  background-color: #2ecc71;
+}
+
+.comment-item {
+  margin: 5px 0;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* Emoji Reactions */
+.emoji-reactions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.emoji-button {
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.emoji-button:hover {
+  background-color: #ddd;
+}
+
+/* Profile Page */
+.profile-page {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.profile-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profile-button {
+  background-color: #8e44ad;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-button:hover {
+  background-color: #9b59b6;
+}
+
+/* Login / Signup Pages */
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auth-title {
+  margin-bottom: 20px;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.auth-button:hover {
+  background-color: #3498db;
+}
+
+.auth-error {
+  color: red;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Create Post - File Input Icons */
+.file-inputs {
+  display: flex;
+  justify-content: space-around;
+  margin: 15px 0;
+}
+
+.icon {
+  font-size: 36px;
+  cursor: pointer;
+  color: #34495e;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.icon:hover {
+  color: #3498db;
+  transform: scale(1.1);
+}
+
+/* Adjust spacing and styling */
+.caption-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.post-button {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post-button:hover {
+  background-color: #3498db;
+}
+
+/* Signup Page Styling */
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.auth-title {
+  font-family: 'Merriweather', serif;
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  outline: none;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #27ae60;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-button:hover {
+  background-color: #2ecc71;
+  transform: scale(1.05);
+}
+
+.error-message {
+  color: #e74c3c;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .auth-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .auth-title {
+    font-size: 28px;
+  }
+}
+
+/* Landing Page Styling */
+.landing-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5;
+  padding: 20px;
+  text-align: center;
+}
+
+.landing-content {
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.landing-title {
+  font-family: 'Merriweather', serif;
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.landing-description {
+  font-size: 18px;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+}
+
+.landing-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.landing-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Login Button Styling */
+.login-button {
+  background-color: #3498db;
+  color: white;
+}
+
+.login-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Signup Button Styling */
+.signup-button {
+  background-color: #27ae60;
+  color: white;
+}
+
+.signup-button:hover {
+  background-color: #2ecc71;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .landing-content {
+    padding: 20px;
+  }
+
+  .landing-title {
+    font-size: 28px;
+  }
+
+  .landing-description {
+    font-size: 16px;
+  }
+}
+
+/* Feed Layout */
+.feed {
+  padding: 20px;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Posts Grid */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Post Cards */
+.post-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.post-card:hover {
+  transform: scale(1.02);
+}
+
+.post-card.expanded {
+  grid-column: span 2; /* Expand to span two columns */
+}
+
+/* Post Image */
+.post-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.additional-image {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Caption Preview */
+.caption-preview {
+  padding: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* styles.css */
+
+/* Feed Grid Layout */
+.feed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.post-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.post-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.post-image-preview {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.post-caption-preview {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+}
+
+/* Expanded View Modal */
+.expanded-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expanded-content {
+  background: white;
+  padding: 20px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.expanded-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin: 10px 0;
+}
+
+/* Ensure the app takes full width for larger screens */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  width: 100%; /* Navbar spans full width */
+  background-color: #333;
+  padding: 10px;
+}
+
+.feed {
+  max-width: 1200px; /* Max width for large screens */
+  margin: 20px auto; /* Center the feed */
+  padding: 10px;
+}
+
+/* Grid Layout for posts */
+.feed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Larger columns for desktop */
+  gap: 20px;
+}
+
+/* Full-width container on larger screens */
+@media screen and (min-width: 1024px) {
+  .feed {
+    width: 100%; /* Take the full width of the screen */
+    padding: 20px;
+  }
+
+  .post-card {
+    width: 100%; /* Ensure post card stretches fully */
+  }
+  
+  .post-image-preview {
+    height: 250px; /* Larger images for desktop */
+  }
+  
+  /* Full-screen modal for the expanded view */
+  .expanded-view {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+  }
+  
+  .expanded-content {
+    max-width: 900px; /* Make the expanded content wider for desktops */
+    padding: 40px;
+  }
+}
+
+/* Mobile optimizations */
+@media screen and (max-width: 1024px) {
+  .feed {
+    padding: 10px;
+    margin: 0;
+  }
+  
+  .post-image-preview {
+    height: 150px; /* Smaller images for mobile */
+  }
+
+  .expanded-content {
+    max-width: 90%; /* More compact modal on mobile */
+  }
+}
+
+.post-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.post-caption-preview {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+}
+
+/* Expanded View Modal */
+.expanded-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expanded-content {
+  background: white;
+  padding: 20px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.expanded-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin: 10px 0;
+}
+
+/* Bright mode styles (default) */
+.bright-mode {
+  background-color: white;
+  color: black;
+}
+
+.bright-mode .navbar {
+  background-color: #f8f9fa; /* Light background for the navbar */
+  color: black;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .navbar {
+  background-color: #333; /* Dark background for the navbar */
+  color: white;
+}
+
+/* Style for the theme toggle button */
+.toggle-theme-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.toggle-theme-button:hover {
+  background-color: #0056b3;
+}
+
+
+.toggle-theme-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px; /* Adjust size as needed */
+  color: inherit;  /* Match the current text color */
+  margin: 10px;    /* Adjust margin as needed */
+}
